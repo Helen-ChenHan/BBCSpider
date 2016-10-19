@@ -25,6 +25,8 @@ class EmptyDrop(object):
 
 class SaveFiles(object):
     def process_item(self, item, spider):
+	formatedDate = time.strptime(item["date"],"%d %B %Y")
+        item["date"] = time.strftime("%d/%m/%Y", formatedDate)
         splitDate = item["date"].split(' ')
         year = splitDate[2]
         month = splitDate[1]
