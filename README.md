@@ -1,1 +1,3 @@
 # BBCSpider
+
+scrapy crawl bbc
